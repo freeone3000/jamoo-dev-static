@@ -17,7 +17,7 @@ For inference, we don't actually need to transfer the model to the GPUs that oft
 ## Getting it Powered and Networked
 Power is going to be a single Corsair 1600W 80+ Gold PSU. We're going to use every watt, so 1600W isn't overkill in this case. 
 
-Networking was more complicated. The initial idea of using a wireless dongle was stymied by Ubuntu hanging on boot if it doesn't have network. This was not solved by installing the firmware or configuring network manager. I tried for a day or two to fix it, with a spare laptop wired up as an ersatz wifi-to-ethernet adapter, but unfortunately fighting with Ubuntu yields no good results[^1]. I've settled on a 1GBe powerline adapter from TP-Link wired into my [[home network|home network]], connected to the ethernet port.
+Networking was more complicated. The initial idea of using a wireless dongle was stymied by Ubuntu hanging on boot if it doesn't have network. This was not solved by installing the firmware or configuring network manager. I tried for a day or two to fix it, with a spare laptop wired up as an ersatz wifi-to-ethernet adapter, but unfortunately fighting with Ubuntu yields no good results[^1]. I've settled on a 1GBe powerline adapter from TP-Link wired into my [home network](home%20network.md), connected to the ethernet port.
 
 [^1] At this point, why am I using Ubuntu at all? Because all of the ML hacker stuff is designed for Ubuntu. Not debian, not RHEL, and decidedly not arch. Dockerized? Surely not. Running nix native? Good luck passing *all* of your GPUs through nix stably! Last time I tried, I couldn't stabilize that either. So save running OpenStack or vSphere as baseline, this is the best we can do. My time for personal projects is no longer infinite.
 
