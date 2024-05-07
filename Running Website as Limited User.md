@@ -1,3 +1,6 @@
+---
+share: "true"
+---
 Previously, the website (with no user input, no interaction, that serves static files) was running *as my user* 😱, or worse, under Docker as system 😱🙀🫨 In order to fix this, some changes needed to be made.
 
 [This RedHat documentation](https://www.redhat.com/sysadmin/container-systemd-persist-reboot) will be used as a guide and touchstone throughout. My dev and deploy system, however, is running Debian Bookworm, so my adaptations will follow.
