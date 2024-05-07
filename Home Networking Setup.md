@@ -1,3 +1,6 @@
+---
+share: "true"
+---
 ### Networking
 WAN connection: Bell Telecom
 Firewall device / Core Router: [R86S running OPNsense](Getting%20SFP%20on%20my%20R86S%20working%20in%20OPNsense)
