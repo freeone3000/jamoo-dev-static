@@ -1,3 +1,6 @@
+---
+share: "true"
+---
 ## Background
 
 I purchased a mini-PC to use as a firewall / replacement router for my ISP. Unfortunately, its SFP+ modules were not detected under opnsense, even when connected via DAC to its on-"rack" switch. Let's get to the bottom of this!
