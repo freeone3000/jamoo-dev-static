@@ -3,7 +3,7 @@ share: "true"
 ---
 ### Networking
 WAN connection: Bell Telecom
-Firewall device / Core Router: [R86S running OPNsense](Getting%20SFP%20on%20my%20R86S%20working%20in%20OPNsense)
+Firewall device / Core Router: [R86S running OPNsense](./Getting%2520SFP%2520on%2520my%2520R86S%2520working%2520in%2520OPNsense.md#)
 Core Switch: Mikrotech 9-port 2.5GBe 1x SFP+ Networking Switch (discontinued; it was cheap!)
 Wireless AP: TPLink Oenada AX5400 Ceiling Mount, *not* ceiling mounted
 
