@@ -1,3 +1,8 @@
+---
+share: "true"
+---
+
+
 The problem: I live in Quebec and I don't speak French
 
 The solution: ~~Learn French~~ Overcome human limitations by exploiting boundless compute
