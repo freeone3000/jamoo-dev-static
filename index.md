@@ -12,7 +12,7 @@ title: Jasmine Moore's Personal Website
 
 ### Metasite
 - [Running Website as Limited User](./Running%2520Website%2520as%2520Limited%2520User)
-- [Moving to Github Pages](./Moving%2520to%2520Github%2520Pages)
+- [Moving to GitHub Pages](./Moving%2520to%2520Github%2520Pages)
 
 ### Self-Hosting Forays
 - [Home Networking Setup](./Home%2520Networking%2520Setup)
