@@ -1,5 +1,6 @@
 ---
 share: "true"
+title: Jasmine Moore's Personal Website
 ---
 ### Personal Projects
 - [Live French Translation Project](./Live%2520French%2520Translation%2520Project.md#)
