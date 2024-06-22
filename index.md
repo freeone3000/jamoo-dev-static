@@ -2,16 +2,17 @@
 share: "true"
 ---
 ### Personal Projects
-[Live French Translation Project](./Live%20French%20Translation%20Project)
-[Setting up a mining rig as an AI inference platform](./Setting%20up%20a%20mining%20rig%20as%20an%20AI%20inference%20platform)
+- [Live French Translation Project](./Live%2520French%2520Translation%2520Project.md#)
+- [Setting up a mining rig as an AI inference platform](./Setting%2520up%2520a%2520mining%2520rig%2520as%2520an%2520AI%2520inference%2520platform.md#)
+
 
 ### Discovery
-[NixOS WTF](NixOS%20WTF)
+- [NixOS WTF](NixOS%20WTF)
 ### Metasite
-[Running Website as Limited User](./Running%20Website%20as%20Limited%20User)
-[Moving to Github Pages](./Moving%20to%20Github%20Pages)
+- [Running Website as Limited User](./Running%2520Website%2520as%2520Limited%2520User.md#)
+- [Moving to Github Pages](./Moving%2520to%2520Github%2520Pages.md#)
 
 ### Self-Hosting Forays
-[Home Networking Setup](./Home%20Networking%20Setup)
-[Getting SFP on my R86S working in OPNsense](./Getting%20SFP%20on%20my%20R86S%20working%20in%20OPNsense)
-[Cryptominer Detected - Rebuild of NAS](./Cryptominer%20Detected%20-%20Rebuild%20of%20NAS)
+- [Home Networking Setup](./Home%2520Networking%2520Setup.md#)
+- [Getting SFP on my R86S working in OPNsense](./Getting%2520SFP%2520on%2520my%2520R86S%2520working%2520in%2520OPNsense.md#)
+- [Cryptominer Detected - Rebuild of NAS](./Cryptominer%2520Detected%2520-%2520Rebuild%2520of%2520NAS.md#)
