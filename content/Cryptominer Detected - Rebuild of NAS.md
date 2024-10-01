@@ -1,5 +1,6 @@
 ---
 share: "true"
+date: 2024-05-07
 ---
 Noticed the NAS was running a rather high load. Rather than something destructive with my files or something persistent to steal data, they gave themselves away by... running a cryptominer? It was Ravenpool, by the way, absolute bastards.
 
