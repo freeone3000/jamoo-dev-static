@@ -11,7 +11,7 @@ The following are my notes from reading *The Stranger* by Camus. Some are univer
 
 He lives his life devoid of context. No past or future, no emotions, no involvement. He has very little theory of mind, little introspection, a poor understanding of social cues. Some similarities to autism, some similarities to trauma (which are the same). He refuses to lie and does not understand why he would lie, or how humans play at language. His death is devoid of meaning, as is his life. He is taken advantage of by everyone he meets. I see similarities, and a warning, and thank goodness for NAC to get me out of this rut. I don’t want to end up like him. His people are terrible. He’s terrible, by association. He puts his own whims ahead of the defence of others and I find it absolutely detestable.
 
-People with a bad reputation are reviled because of the danger they bring or unpleasantness associated; it does tar, and it tars for good reason. I am tarred; perhaps, it will untar soon. The modern world is more volatile. My magic friends are more valuable to me than Sara.
+People with a bad reputation are reviled because of the danger they bring or unpleasantness associated; it does tar, and it tars for good reason. I am tarred; perhaps, it will untar soon. The modern world is more volatile.
 
 We need to take stock, we need connection to the past. We must know that we have inertia — an emotional bearing that takes time to change. “Mercurial” is seldom a positive descriptor — it can be a synonym to dishonest. We need to be kind to ourselves when this happens.
 
