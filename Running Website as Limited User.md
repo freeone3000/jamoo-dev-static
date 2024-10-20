@@ -1,6 +1,10 @@
 ---
 share: "true"
+date: 2023-04-19
 ---
+*This article has been obsoleted by [Moving to GitHub Pages], after I decided this was all a bit of a faff and interfering with actually publishing content.*
+
+
 Previously, the website (with no user input, no interaction, that serves static files) was running *as my user* 😱, or worse, under Docker as system 😱🙀🫨 In order to fix this, some changes needed to be made.
 
 [This RedHat documentation](https://www.redhat.com/sysadmin/container-systemd-persist-reboot) will be used as a guide and touchstone throughout. My dev and deploy system, however, is running Debian Bookworm, so my adaptations will follow.
