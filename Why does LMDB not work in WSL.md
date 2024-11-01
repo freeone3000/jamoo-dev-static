@@ -14,8 +14,7 @@ Longer answer follows:
 *This was written as a series of discord messages to my girlfriend, so it's not fully edited. Accuracy is functionally correct, but may not be totally accurate. Email me your corrections and I'll footnote them with credit!*
 
 ## How Computer Memory is Allocated (in Linux)
-Usually computer memory is allocated with malloc but malloc is secretly two system calls in a trenchcoat, mmap and sbrk.
-sbrk sets the “break” between your process’s memory max extent and the next one, the name is a bit historical since we use virtual memory now.
+Usually computer memory is allocated with malloc but malloc is secretly a different system call, malloc. "heap" memory allocation is malloc, and "stack" memory allocation is sbrk. C programmers don't like it when you call them that, but Java programmers don't mind it, and I find that convention to be more useful.
 
 Virtual memory is a feature of protected mode (versus real mode). Instead of one contiguous chunk, you are given memory pages, which may or may not be contiguous, to hold your data. Pages are all the same size, and your pointers essentially point to page_start+offset_into_page
 Each page is owned by one process (mostly, we’re actually going there). This counters memory fragmentation, because the addresses you get back are not real addresses! They’re mapped!
