@@ -16,7 +16,7 @@ Longer answer follows:
 ## How Computer Memory is Allocated (in Linux)
 Usually computer memory is allocated with malloc but malloc is secretly a different system call, mmap. "heap" memory allocation from pretty much every source is mmap, and "stack" memory allocation is sbrk. C programmers don't like it when you call them that, but Java programmers don't mind it, and I find that convention to be more useful.
 
-Virtual memory is a feature of protected mode (versus real mode). Instead of one contiguous chunk, you are given memory pages, which may or may not be contiguous, to hold your data. Pages are all the same size, and your pointers essentially point to page_start+offset_into_page
+Virtual memory is a feature of protected mode (versus real mode). Instead of one contiguous chunk, you are given memory pages, which may or may not be contiguous, to hold your data. Pages are all the same size, and your pointers essentially point to page_start+offset_into_page.
 Each page is owned by one process (mostly, we’re actually going there). This counters memory fragmentation, because the addresses you get back are not real addresses! They’re mapped!
 
 Think about having 5 pages and a linear (ie, bad) allocator. If a 2-page program starts, then a 1-page, the first 3 pages are taken. The 2-page program exists, then a 4-page program starts.
@@ -51,7 +51,7 @@ It didn’t work and potentially couldn’t work. All major operating systems sh
 *👽 It’s an alien 🛸*
 
 Fundamental differences in the execution, implementation, and concept of syscalls brought us to MSFT scrapping WSL1 in favor of WSL2, which is Linux in a VM. 
-It’s a very good VM! It automatically does things like inherit runtime permissions, use windows drivers for things like CUDA and sound, can open a display on the host, many many good things
+It’s a very good VM! It automatically does things like inherit runtime permissions, use windows drivers for things like CUDA and sound, can open a display on the host, many many good things.
 It can also natively access host-partition files through the wsl-ntfs driver, which is not great. 
 
 Many problems are related to performance, but I just ran into one related to sparse files. They always report as their extants rather than their mapped regions
