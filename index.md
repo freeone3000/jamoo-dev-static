@@ -6,10 +6,8 @@ title: Jasmine Moore's Personal Website
 - [Live French Translation Project]({% link Live French Translation Project.md %})
 - [Setting up a mining rig as an AI inference platform]({% link Setting up a mining rig as an AI inference platform.md %})
 
-### Cool Things
-- [Why does LMDB not work in WSL?]({% link Why does LMDB not work in WSL.md %})
-
 ### Discovery
+- [Why does LMDB not work in WSL?]({% link Why does LMDB not work in WSL.md %})
 - [NixOS WTF]({% link NixOS WTF.md %})
 
 ### Metasite
