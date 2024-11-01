@@ -6,6 +6,8 @@ title: Jasmine Moore's Personal Website
 - [Live French Translation Project]({% link Live French Translation Project.md %})
 - [Setting up a mining rig as an AI inference platform]({% link Setting up a mining rig as an AI inference platform.md %})
 
+### Cool Things
+- [Why does LMDB not work in WSL?]({% link Why does LMDB not work in WSL.md %})
 
 ### Discovery
 - [NixOS WTF]({% link NixOS WTF.md %})
@@ -20,5 +22,6 @@ title: Jasmine Moore's Personal Website
 - [Cryptominer Detected - Rebuild of NAS]({% link Cryptominer Detected - Rebuild of NAS.md %})
 
 
-### Media
+### Non-Tech
+#### Media
 - [The Stranger]({% link The Stranger.md %})
