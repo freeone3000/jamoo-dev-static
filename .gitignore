@@ -1,5 +1,10 @@
+# ignore IDE files
+.idea/
+# ignore jekyll cache
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+# ignore output
+output/
