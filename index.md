@@ -23,3 +23,6 @@ title: Jasmine Moore's Personal Website
 ### Non-Tech
 #### Media
 - [The Stranger]({% link The Stranger.md %})
+
+#### Travelogues
+- [Eternal Weekend 2024]({% link Eternal Weekend 2024.md %})
