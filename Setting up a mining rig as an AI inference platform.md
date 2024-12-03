@@ -1,6 +1,9 @@
 ---
 share: "true"
 ---
+
+***tl;dr**: just buy a mac mini, it'll do this better*
+
 I'm interested in model experimentation, but paying overhead for remote servers and per-use calls seems silly to me. The breakeven point for this rig versus hosting on Colab is 300 hours counting only the VRAM capacity; if you need speed, there's no possible comparison.
 
 ## Goals:
@@ -17,7 +20,7 @@ For inference, we don't actually need to transfer the model to the GPUs that oft
 ## Getting it Powered and Networked
 Power is going to be a single Corsair 1600W 80+ Gold PSU. We're going to use every watt, so 1600W isn't overkill in this case. 
 
-Networking was more complicated. The initial idea of using a wireless dongle was stymied by Ubuntu hanging on boot if it doesn't have network. This was not solved by installing the firmware or configuring network manager. I tried for a day or two to fix it, with a spare laptop wired up as an ersatz wifi-to-ethernet adapter, but unfortunately fighting with Ubuntu yields no good results[^1]. I've settled on a 1GBe powerline adapter from TP-Link wired into my [home network](home%20network.md), connected to the ethernet port.
+Networking was more complicated. The initial idea of using a wireless dongle was stymied by Ubuntu hanging on boot if it doesn't have network. This was not solved by installing the firmware or configuring network manager. I tried for a day or two to fix it, with a spare laptop wired up as an ersatz wifi-to-ethernet adapter, but unfortunately fighting with Ubuntu yields no good results[^1]. I've settled on a 1GBe powerline adapter from TP-Link wired into my [home network](%{link Home Networking Setup.md %}), connected to the ethernet port.
 
 [^1] At this point, why am I using Ubuntu at all? Because all of the ML hacker stuff is designed for Ubuntu. Not debian, not RHEL, and decidedly not arch. Dockerized? Surely not. Running nix native? Good luck passing *all* of your GPUs through nix stably! Last time I tried, I couldn't stabilize that either. So save running OpenStack or vSphere as baseline, this is the best we can do. My time for personal projects is no longer infinite.
 
@@ -98,7 +101,20 @@ Filesystem                         Size  Used Avail Use% Mounted on
 /dev/mapper/ubuntu--vg-ubuntu--lv   57G   13G   42G  23% /
 ```
 Ah. So the seller on aliexpress lied about the quality of his goods. Looks like we're going to leverage the NAS in order to get some decent amounts of storage on here.
-### NFS
-Step 1 is following [the first guide I found on google](https://linuxconfig.org/how-to-configure-nfs-on-linux) to configure NFS on Mumei. I've done so, exporting `/bulk/exports/llm` to Lucy's static IP.
 
-TODO THIS IS WHERE I STOPPED. MUMEI HAS THE NFS
+### NFS
+For disk, I'm following following [the first guide I found on google](https://linuxconfig.org/how-to-configure-nfs-on-linux) to configure NFS on Mumei. I've done so, exporting `/bulk/exports/llm` to Lucy's static IP.
+
+It can then mount the storage, and access it at the speed of the network.
+
+### RAM
+Ah, the sticky wicket. It has a 4GB SODIMM welded(!) to the motherboard. Since `llama.cpp` dislikes loading models streaming from disk, obviously we need to change ollama... 
+
+Or, as a "temporary" measure, we can do hacks. We have the data on NFS on disk, so, what if we just load the model over the network? There's a trick for Mellanox cards (and *only* Mellanox cards) to use RDMA, but instead we fake it the other way and use swap-on-NFS to allow the model to be loaded into "RAM", and from there into VRAM. It is incredibly slow (five minutes to load a model!), but there's enough VRAM in this system for it to stay resident.
+
+### Actually Running A Model
+Inference results on ollama show results comparable to an M1 mac, but with much lower quantization, equivalent to having an M1 mac with ... 96GB of RAM. You can just buy that now, and it's much cheaper. I'd advise against trying this setup for *many many* reasons, the increasing power of quantized models and availability of NPUs on ARM chips included. There's no need for something like this anymore.
+
+
+
+
