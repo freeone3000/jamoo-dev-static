@@ -7,6 +7,7 @@ title: Jasmine Moore's Personal Website
 - [Setting up a mining rig as an AI inference platform]({% link Setting up a mining rig as an AI inference platform.md %})
 
 ### Discovery
+- [IPv6 OSX Link-Local Strangeness]({% link IPv6 OSX Link-Local Strangeness.md %})
 - [Why does LMDB not work in WSL?]({% link Why does LMDB not work in WSL.md %})
 - [NixOS WTF]({% link NixOS WTF.md %})
 
