@@ -34,7 +34,13 @@ success! It's *routable* as a link-local address, even in the absence of support
 Wireshark to see what the issue is. We see that we're getting back ICMP results... on `lo0`. Because it's trying to route
 "fe80::8f1:f892:9152:9106" to `lo0`! Even though I specified scope_id of `0xe`, it's still trying to route it to `lo0`!
 
-This is actually similar behavior to the ipv6 stack in linux and other BSDs -- they *also* will switch interfaces of
-link-local packets destined for the current machine via loopback. However, those machines *accept packets routed this way*.
-OSX does not. This is a bug, and after talking with a friend who happens to work there, I've
+This is actually similar behavior to the ipv6 stack in linux -- it *also* will switch interfaces of
+link-local packets destined for the current machine via loopback. However, linux machines *accept packets routed this way*. 
+FreeBSD shares the filtering behavior, so if you don't specify scope_id it will make the packet undeliverable, but it also
+accepts scope_id when supplied. FreeBSD will also choose a physical interface over a loopback interface if the packet is in
+the physical interface's ipv6 range, even when the physical interface's address is link-local (this may be by chance, 
+but it 100% uses scope_id when supplied). This appears to be an OSX-only kernel netstack-specific interaction; Apple 
+chose the driver behaviour of linux and paired it with the bsd netstack, which causes this issue.
+
+This is a bug, and after talking with a friend who happens to work there, I've
 [filed a Feedback Assistant report](https://feedbackassistant.apple.com/feedback/16143533). I'll update when I get any sort of response.
