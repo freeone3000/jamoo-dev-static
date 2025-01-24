@@ -19,6 +19,7 @@ title: Jasmine Moore's Personal Website
 - [Home Networking Setup]({% link Home Networking Setup.md %})
 - [Getting SFP on my R86S working in OPNsense]({% link Getting SFP on my R86S working in OPNsense.md %})
 - [Cryptominer Detected - Rebuild of NAS]({% link Cryptominer Detected - Rebuild of NAS.md %})
+- [Caddy ACME Wildcard Challenges]({% link Caddy ACME Wildcard Challenges.md %})
 
 
 ### Non-Tech
