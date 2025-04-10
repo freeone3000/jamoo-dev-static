@@ -2,6 +2,9 @@
 share: "true"
 title: Jasmine Moore's Personal Website
 ---
+### About
+- [Salary Transparency]({% link Salary Transparency.md %})
+
 ### Personal Projects
 - [Live French Translation Project]({% link Live French Translation Project.md %})
 - [Setting up a mining rig as an AI inference platform]({% link Setting up a mining rig as an AI inference platform.md %})
