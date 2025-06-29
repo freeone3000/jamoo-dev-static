@@ -28,6 +28,7 @@ title: Jasmine Moore's Personal Website
 ### Non-Tech
 #### Media
 - [The Stranger]({% link The Stranger.md %})
+- [Cyberpunk 2077]({% link Cyberpunk 2077.md %})
 
 #### Travelogues
 - [Eternal Weekend 2024]({% link Eternal Weekend 2024.md %})
