@@ -60,9 +60,7 @@ A bit about the Windows Subsystem for Linux version 2.
 
 The Windows Subsystem for Linux version 1 was an API translation layer, bringing the linux userland and executable format to natively parse on windows. A true subsystem! This is a good and honest endeavor! Reverse-WINE in all of its glory!
 
-It didn’t work. It potentially *couldn’t* work. All major operating systems share a common ancestor, SYSV UNIX, except windows, who is derived from VMS.
-
-*👽 It’s an alien 🛸*
+It didn’t work. It potentially *couldn’t* work. All major operating systems share a common ancestor, SYSV UNIX, except windows, who is derived from VMS. *👽 It’s an alien 🛸*
 
 Fundamental differences in the execution, implementation, and concept of syscalls (notably, `mmap(2)`) caused Microsoft to scrap WSL1 in favor of WSL2. **WSL2 is Linux in a VM.**
 
