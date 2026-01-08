@@ -55,19 +55,58 @@ also see https://github.com/zachanima/t3/tree/master/app/assets/fonts ?
     font-style: italic;
 }
 
-/* get the fonts correct */
-body {
-    font-family: "Eve Sans Neue Condensed Bold Italic", "Eve Sans Neue Condensed Bold", "Eve Sans Neue Condensed Italic", "Even Sans Neue Condensed", "EuroStyle Normal", "Consolas", monospace;
+@font-face {
+    font-family: "Eve Sans Neue Expanded";
+    src: url("../fonts/evesansneue-expanded.woff2") format("woff2");
+    font-weight: 100 400;
+    font-style: normal;
 }
-h1, h2, h3, h4, h5 {
-    font-family: "Eve Sans Neue", "Shentox", "Cambria", sans-serif;
+@font-face {
+    font-family: "Eve Sans Neue Expanded Bold";
+    src: url("../fonts/evesansneue-expandedbold.woff2") format("woff2");
+    font-weight: 401 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eve Sans Neue Expanded Italic";
+    src: url("../fonts/evesansneue-expandeditalic.woff2") format("woff2");
+    font-weight: 100 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Eve Sans Neue Expanded Bold Italic";
+    src: url("../fonts/evesansneue-expandedbolditalic.woff2") format("woff2");
+    font-weight: 401 900;
+    font-style: italic;
+}
+
+/* get the fonts correct */
+html {
+    font-family: "Eve Sans Neue Condensed Bold Italic", "Eve Sans Neue Condensed Bold", "Eve Sans Neue Condensed Italic", "Even Sans Neue Condensed", "EuroStyle Normal", "Consolas", monospace;
+    background: black url("../images/iss073e0532039orig.jpg") no-repeat center center;
+    background-size: calc(4128px / 2) calc(2752px / 2);
+}
+
+/* big header */
+header {
+    color: white;
+    font-family: "Eve Sans Neue Expanded Bold Italic", "Eve Sans Neue Expanded Bold", "Eve Sans Neue Expanded Italic", "Eve Sans Neue Expanded", "Shentox", "Cambria", sans-serif;
+    max-width: 100em;
+    text-align: justify;
 }
 
 /* neocom nav menu */
 nav {
     font-weight: bold;
 }
-nav section {
+nav h1, nav h2, nav h3, nav h4, nav h5 {
+    font-family: "Eve Sans Neue Bold Italic", "Eve Sans Neue Bold", "Eve Sans Neue Italic", "Eve Sans Neue", "Shentox", "Cambria", sans-serif;
 }
-nav li {
+nav section {
+    color: white;
+    margin: 2em auto 2em auto;
+}
+nav>section {
+    background-color: rgba(0, 0, 100, 0.5);
+    backdrop-filter: blur(10px);
 }
