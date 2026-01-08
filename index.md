@@ -2,9 +2,11 @@
 share: "true"
 title: Jasmine Moore's Personal Website
 ---
-### About
-- [Salary Transparency]({% link Salary Transparency.md %})
 
+## Publications
+- [TextWorld: A Learning Environment for Text-based Games (arxiv)](https://arxiv.org/pdf/1806.11532)
+
+## Engineering Work
 ### Personal Projects
 - [Live French Translation Project]({% link Live French Translation Project.md %})
 - [Setting up a mining rig as an AI inference platform]({% link Setting up a mining rig as an AI inference platform.md %})
@@ -24,6 +26,8 @@ title: Jasmine Moore's Personal Website
 - [Cryptominer Detected - Rebuild of NAS]({% link Cryptominer Detected - Rebuild of NAS.md %})
 - [Caddy ACME Wildcard Challenges]({% link Caddy ACME Wildcard Challenges.md %})
 
+### About
+- [Salary Transparency]({% link Salary Transparency.md %})
 
 ### Non-Tech
 #### Media
