@@ -10,9 +10,18 @@ html {
 header {
     color: white;
     font-family: "Eve Sans Neue Expanded Bold Italic", "Eve Sans Neue Expanded Bold", "Eve Sans Neue Expanded Italic", "Eve Sans Neue Expanded", "Shentox", "Cambria", sans-serif;
-    max-width: 100em;
-    text-align: justify;
+
+    /* make it centered */
+    min-width: 22em;
+    width: 50%;
+    margin: 0 auto;
+    /* make it title-like */
+    letter-spacing: 0.3em;
+    text-transform: capitalize;
+    font-weight: 700;
+    text-shadow: 1px 1px darkgrey;
 }
+
 
 /* neocom nav menu */
 nav {
