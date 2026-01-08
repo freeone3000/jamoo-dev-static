@@ -13,6 +13,7 @@ gem "minima", "~> 2.5"
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 gem "github-pages", group: :jekyll_plugins
 gem "webrick" # no longer in ruby 3.0
+gem "csv" # no longer in Ruby 3.4.0
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-coffeescript"
