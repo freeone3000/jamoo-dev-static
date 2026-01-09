@@ -50,17 +50,13 @@ nav h1, nav h2, nav h3, nav h4, nav h5 {
     width: 100%;
 }
 /* make drop-down menus */
-nav *[data-collapsed-state="expanded"] h3::before {
+nav *[data-collapsed-state] h3::before {
     content: url("../images/arrow_down_white.svg");
     width: 25px;
     height: 25px;
     float: left;
 }
 nav *[data-collapsed-state="collapsed"] h3::before {
-    content: url("../images/arrow_down_white.svg");
-    width: 25px;
-    height: 25px;
-    float: left;
     rotate: 270deg;
 }
 nav *[data-collapsed-state="collapsed"] ul {
