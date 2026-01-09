@@ -1,9 +1,22 @@
 @import "./eve-font.css";
 
+/* general rules */
 html {
     font-family: "Eve Sans Neue Condensed Bold Italic", "Eve Sans Neue Condensed Bold", "Eve Sans Neue Condensed Italic", "Even Sans Neue Condensed", "EuroStyle Normal", "Consolas", monospace;
-    background: black url("../images/iss073e0532039orig.jpg") no-repeat center center;
+    background: black url("../images/iss073e0532039orig.jpg") no-repeat 0 0 fixed;
     background-size: calc(4128px / 2) calc(2752px / 2);
+}
+/* orange for internal links,  yellow for external links */
+a {
+    color: orange;
+    text-decoration: none;
+}
+a[href^="http"] {
+    color: yellow;
+}
+/* hover glow */
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, a:hover {
+    filter: drop-shadow(0 0 10px);
 }
 
 /* big header */
@@ -22,19 +35,49 @@ header {
     text-shadow: 1px 1px darkgrey;
 }
 
-
 /* neocom nav menu */
 nav {
+    max-width: 60%;
     font-weight: bold;
+}
+nav ul {
+    list-style: none;
+    padding-left: 0;
 }
 nav h1, nav h2, nav h3, nav h4, nav h5 {
     font-family: "Eve Sans Neue Bold Italic", "Eve Sans Neue Bold", "Eve Sans Neue Italic", "Eve Sans Neue", "Shentox", "Cambria", sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
 }
+/* make drop-down menus */
+nav *[data-collapsed-state="expanded"] h3::before {
+    content: url("../images/arrow_down_white.svg");
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+nav *[data-collapsed-state="collapsed"] h3::before {
+    content: url("../images/arrow_down_white.svg");
+    width: 25px;
+    height: 25px;
+    float: left;
+    rotate: 270deg;
+}
+nav *[data-collapsed-state="collapsed"] ul {
+    display: none;
+}
+
 nav section {
     color: white;
-    margin: 2em auto 2em auto;
+    padding: 0 2em;
 }
+nav>section>ul {
+    padding: 0 2em;
+}
+/* pseudo-windows */
 nav>section {
-    background-color: rgba(0, 0, 100, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
+    background-blend-mode: revert;
+    padding: 0;
 }
