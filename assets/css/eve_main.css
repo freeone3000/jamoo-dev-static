@@ -3,7 +3,10 @@
 /* general rules */
 html {
     font-family: "Eve Sans Neue Condensed Bold Italic", "Eve Sans Neue Condensed Bold", "Eve Sans Neue Condensed Italic", "Even Sans Neue Condensed", "EuroStyle Normal", "Consolas", monospace;
-    background: black url("../images/iss073e0532039orig.jpg") no-repeat 0 0 fixed;
+    background-color: black;
+    background-image: url("../images/iss073e0532039orig.jpg"), radial-gradient(calc(2982px/2) calc(984px/2), #000000, #222222);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-size: calc(4128px / 2) calc(2752px / 2);
 }
 /* orange for internal links,  yellow for external links */
@@ -41,11 +44,6 @@ nav {
     font-weight: bold;
     color: white;
 
-    section, >section>ul {
-        /* fix padding on these elements only */
-        padding: 0 2em;
-    }
-
     /* pseudo-windows */
     > section {
         background-color: rgba(0, 0, 0, 0.4);
@@ -56,7 +54,7 @@ nav {
 
     ul {
         list-style: none;
-        padding-left: 0;
+        padding: 0 27px;
     }
 
     h1, h2, h3, h4, h5 {
