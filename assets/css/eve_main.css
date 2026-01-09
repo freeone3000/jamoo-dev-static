@@ -19,7 +19,12 @@ a[href^="http"] {
 }
 /* hover glow */
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, a:hover {
-    filter: drop-shadow(0 0 10px);
+    filter: drop-shadow(0 0 10px lab(92.2 -20.71 7.53));
+    mix-blend-mode: unset;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0% 100%);
+}
+a:hover {
+    padding-right: 1em;
 }
 
 /* big header */
