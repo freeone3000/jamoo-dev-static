@@ -1,6 +1,8 @@
 ---
 share: true
 date: 2024-11-25
+title: Eternal Weekend 2024
+categories: ["Non-Tech", "Travelogues"]
 ---
 
 # Eternal Weekend 2024

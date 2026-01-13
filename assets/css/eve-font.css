@@ -1,0 +1,81 @@
+/* fonts:
+also see https://github.com/zachanima/t3/tree/master/app/assets/fonts ?
+    backup header: Shentox
+    backup body: EuroStyle Normal
+ */
+
+@font-face {
+    font-family: "Eve Sans Neue";
+    src: url("../fonts/evesansneue-regular.woff2") format("woff2");
+    font-weight: 100 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eve Sans Neue Bold";
+    src: url("../fonts/evesansneue-bold.woff2") format("woff2");
+    font-weight: 401 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eve Sans Neue Italic";
+    src: url("../fonts/evesansneue-italic.woff2") format("woff2");
+    font-weight: 100 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Eve Sans Neue Bold Italic";
+    src: url("../fonts/evesansneue-bolditalic.woff2") format("woff2");
+    font-weight: 401 900;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: "Eve Sans Neue Condensed";
+    src: url("../fonts/evesansneue-condensed.woff2") format("woff2");
+    font-weight: 100 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eve Sans Neue Condensed Bold";
+    src: url("../fonts/evesansneue-condensedbold.woff2") format("woff2");
+    font-weight: 401 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eve Sans Neue Condensed Italic";
+    src: url("../fonts/evesansneue-condenseditalic.woff2") format("woff2");
+    font-weight: 100 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Eve Sans Neue Condensed Bold Italic";
+    src: url("../fonts/evesansneue-condensedbolditalic.woff2") format("woff2");
+    font-weight: 401 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Eve Sans Neue Expanded";
+    src: url("../fonts/evesansneue-expanded.woff2") format("woff2");
+    font-weight: 100 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eve Sans Neue Expanded Bold";
+    src: url("../fonts/evesansneue-expandedbold.woff2") format("woff2");
+    font-weight: 401 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Eve Sans Neue Expanded Italic";
+    src: url("../fonts/evesansneue-expandeditalic.woff2") format("woff2");
+    font-weight: 100 400;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Eve Sans Neue Expanded Bold Italic";
+    src: url("../fonts/evesansneue-expandedbolditalic.woff2") format("woff2");
+    font-weight: 401 900;
+    font-style: italic;
+}

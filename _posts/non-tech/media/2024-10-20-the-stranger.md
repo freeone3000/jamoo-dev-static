@@ -2,7 +2,7 @@
 share: "true"
 date: 2024-10-20
 title: The Stranger
-categories: ["Media"]
+categories: ["Non-Tech", "Media"]
 ---
 
 # The Stranger

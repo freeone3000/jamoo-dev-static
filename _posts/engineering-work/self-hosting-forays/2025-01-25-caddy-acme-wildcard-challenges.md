@@ -2,6 +2,7 @@
 share: true
 title: Caddy ACME Wildcard Challenges
 date: 2025-01-25
+categories: ["Engineering Work", "Self-Hosting Forays"]
 ---
 
 # Caddy Acme Wildcard Challenges

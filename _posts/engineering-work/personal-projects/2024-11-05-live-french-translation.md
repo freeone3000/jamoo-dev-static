@@ -1,5 +1,7 @@
 ---
 share: "true"
+title: Live French Translation Project
+categories: ["Engineering Work", "Personal Projects"]
 ---
 
 
