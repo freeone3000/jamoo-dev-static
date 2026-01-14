@@ -34,6 +34,8 @@ since these form part of the path. {% endcomment %}
 {% comment %}And now we can render the tree. {% endcomment %}
 {% for level1 in level1_categories %}
 
+<section markdown="1">
+
 ## {{ level1 }}
 
   {% assign level2_categories = "" | split: "" %}
@@ -48,6 +50,7 @@ since these form part of the path. {% endcomment %}
   {% endfor %}
   
   {% for level2 in level2_categories %}
+<section markdown="1">
 
 ### {{ level2 }}
 
@@ -56,6 +59,10 @@ since these form part of the path. {% endcomment %}
 - [{{ post.title }}]({{ post.url | relative_url }})
       {% endif %}
     {% endfor %}
+
+</section>
+
+{% comment %} level2 section {% endcomment %}
   {% endfor %}
   
   {% comment %} Handle level1-only posts (no level2) {% endcomment %}
@@ -64,5 +71,6 @@ since these form part of the path. {% endcomment %}
 - [{{ post.title }}]({{ post.url | relative_url }})
     {% endif %}
   {% endfor %}
+</section> {% comment %} level1 section {% endcomment %}
 {% endfor %}
 

@@ -6,6 +6,7 @@ baseurl: "/"
 url: "https://jamoo.dev/"
 twitter_username: freeone3000
 github_username: freeone3000
+safe: false
 
 plugins:
  - jekyll-coffeescript
