@@ -1,3 +1,7 @@
+---
+title: Salary Transparency
+share: true
+---
 # Salary Transparency
 
 All pay in the below table is in USD.

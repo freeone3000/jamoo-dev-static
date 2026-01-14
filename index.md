@@ -1,11 +1,12 @@
 ---
-share: "true"
 title: Jasmine Moore's Personal Website
 layout: index
 ---
 
+<section markdown="1">
 ## Publications
 - [TextWorld: A Learning Environment for Text-based Games (arxiv)](https://arxiv.org/pdf/1806.11532)
+</section>
 
 {% comment %} Build a category tree from posts {% endcomment %}
 {% assign posts_by_categories = site.posts | where_exp: "post", "post.categories.size > 0" | sort: "date" | reverse %}
@@ -73,4 +74,13 @@ since these form part of the path. {% endcomment %}
   {% endfor %}
 </section> {% comment %} level1 section {% endcomment %}
 {% endfor %}
+
+<section markdown="1">
+## Pages
+{% for page in site.pages %}
+  {% if page.title and page.layout != "index" %}
+- [{{ page.title }}]({{ page.url | relative_url }})
+    {% endif %}
+{% endfor %}
+</section>
 
