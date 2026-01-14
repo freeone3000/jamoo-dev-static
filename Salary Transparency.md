@@ -9,7 +9,7 @@ Currencies have been converted at the rate I was actually paid when I was actual
 
 | Title                           | Company                   | Date                    | Salary                       | Notes                                                    |
 |---------------------------------|---------------------------|-------------------------|------------------------------|----------------------------------------------------------|
-| Contractor                      | Syyncleus                 | 2010                    | $35/hr                       | First job where I was allowed to work :) Java and Swing. |
+| Contractor                      | Syncleus                  | 2010                    | $35/hr                       | First job where I was allowed to work :) Java and Swing. |
 | Research Assistant              | University of North Texas | Oct 2010-May 2012       | $18/hr                       | Worked on the Texas Environmental Observatory project    |
 | Lead Developer                  | WhatsBusy                 | May 2012-Nov 2013       | $35000                       | Startup. Acquired by the TSA.                            |
 | Infrastructure Developer        | Maluuba                   | January 2014-April 2017 | $95000                       | Startup. Acquired by Microsoft.                          |
