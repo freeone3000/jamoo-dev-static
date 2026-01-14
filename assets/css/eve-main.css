@@ -146,4 +146,17 @@ article {
         margin-left: 2em;
         margin-right: 2em;
     }
+
+    pre {
+        font-family: "Fira Code", "Consolas", monospace;
+        border: 1px solid blue;
+        border-radius: 5px;
+        padding: 0.5em;
+        margin-left: 1em;
+        margin-right: 0.5em;
+    }
+
+    img {
+        max-width: 100%;
+    }
 }

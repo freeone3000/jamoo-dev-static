@@ -4,6 +4,7 @@ title: Live French Translation Project
 categories: ["Engineering Work", "Personal Projects"]
 ---
 
+# Live French Translation Project
 
 The problem: I live in Quebec and I don't speak French
 

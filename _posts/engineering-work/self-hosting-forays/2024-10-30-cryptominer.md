@@ -4,6 +4,8 @@ title: Cryptominer on Mumei
 date: 2024-10-30
 categories: ["Engineering Work", "Self-Hosting Forays"]
 ---
+# Cryptominer on Mumei
+
 Noticed the NAS was running a rather high load. Rather than something destructive with my files or something persistent to steal data, they gave themselves away by... running a cryptominer? It was Ravenpool, by the way, absolute bastards.
 
 I examined the rest of the network for activity using OPNSense traffic monitor, and detected no abnormal outgoing traffic. As Mumei was exposed to the internet, it did not have credentials to any other system, and was reverse-firewalled to only allow incoming connections to other machines on the network, no outgoing. Deny-by-default to local network is a rule I'm now recommending and using in the face of ongoing cyberattacks: the local network is saf*er*, but not *safe*.
