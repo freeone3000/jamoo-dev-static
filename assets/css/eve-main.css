@@ -1,0 +1,172 @@
+@import "eve-font.css";
+
+/* global vars */
+:root {
+    --eve-text-font: "Eve Sans Neue Condensed Bold Italic", "Eve Sans Neue Condensed Bold", "Eve Sans Neue Condensed Italic", "Even Sans Neue Condensed", "EuroStyle Normal", "Consolas", monospace;
+    --eve-header-font: "Eve Sans Neue Expanded Bold Italic", "Eve Sans Neue Expanded Bold", "Eve Sans Neue Expanded Italic", "Eve Sans Neue Expanded", "Shentox", "Cambria", sans-serif;
+    --max-readability-width: 1200px; /* max-width for readability concerns on very wide screens (ex, desktops) */
+}
+
+/* general rules */
+html {
+    font-family: var(--eve-text-font), monospace;
+    background-color: black;
+    background-image: url("../images/iss073e0532039orig.jpg"), radial-gradient(calc(2982px/2) calc(984px/2), #000000, #222222);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: calc(4128px / 2) calc(2752px / 2);
+}
+/* orange for internal links,  yellow for external links */
+a {
+    color: orange;
+    text-decoration: none;
+}
+a[href^="http"] {
+    color: yellow;
+}
+/* hover glow */
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, a:hover {
+    filter: drop-shadow(0 0 10px lab(92.2 -20.71 7.53));
+    mix-blend-mode: unset;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0% 100%);
+}
+a:hover {
+    padding-right: 1em;
+}
+
+/* big header */
+header {
+    color: white;
+    font-family: var(--eve-header-font), sans-serif;
+
+    /* make it centered */
+    min-width: 22em;
+    width: 50%;
+    margin: 0 auto;
+    /* make it title-like */
+    letter-spacing: 0.3em;
+    text-transform: capitalize;
+    font-weight: 700;
+    text-shadow: 1px 1px darkgrey;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--eve-header-font), sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+}
+
+/* top-level psuedo-windows, shared between nav and article */
+nav>section, article>section {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    background-blend-mode: revert;
+}
+
+/**
+ * neocom-style nav menu
+ */
+nav {
+    width: 90%;
+    max-width: var(--max-readability-width);
+    font-weight: bold;
+    color: white;
+
+    /* pseudo-windows */
+    > section {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        padding-left: 2em;
+        margin: 2em 0;
+
+        section {
+            margin-left: 0.25em;
+            width: calc(100% - 2em);
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0 27px;
+    }
+
+    /* make drop-down menus */
+
+    *[data-collapsed-state] {
+        h2::before, h3::before, h4::before, h5::before, h6::before {
+            content: url("../images/arrow_down_white.svg");
+            width: 25px;
+            height: 25px;
+            float: left;
+        }
+    }
+
+    *[data-collapsed-state="collapsed"] {
+        h2::before, h3::before, h4::before, h5::before, h6::before {
+            rotate: 270deg;
+        }
+
+        ul {
+            display: none;
+        }
+    }
+}
+
+/**
+ * note-style blog post
+ */
+article {
+    width: 80%;
+    max-width: var(--max-readability-width);
+    margin-left: 1.5em;
+    color: white;
+
+    section {
+        padding-bottom: 0.75em;
+        *:first-child {
+            margin-top: 0; /* reset margin for first child to avoid double margin */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+
+    /* the eve font is unreadable for long documents; reset it to something nice */
+    font-family: serif;
+    @media (min-width: 800px) {
+        font-size: 1.2em; /* enlarge font on desktops */
+    }
+
+    h1, h2, h3, h4, h5 {
+        /* reset the font */
+        font-family: var(--eve-header-font), sans-serif;
+    }
+
+    p {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    pre {
+        font-family: "Fira Code", "Consolas", monospace;
+        border: 1px solid blue;
+        border-radius: 5px;
+        padding: 0.5em;
+        margin-left: 1em;
+        margin-right: 0.5em;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    table {
+        border-collapse: collapse;
+
+        td, th {
+            padding-left: 0.25em;
+            padding-right: 0.25em;
+            border: 1px solid blue;
+        }
+    }
+}

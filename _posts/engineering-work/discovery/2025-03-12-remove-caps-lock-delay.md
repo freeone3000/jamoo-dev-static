@@ -1,3 +1,7 @@
+---
+title: Remove caps lock delay
+categories: ["Engineering Work", "Discovery"]
+---
 # Remove caps lock delay
 
 Run this command in any terminal:

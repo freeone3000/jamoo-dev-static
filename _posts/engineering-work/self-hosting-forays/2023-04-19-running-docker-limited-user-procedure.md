@@ -1,6 +1,8 @@
 ---
 share: "true"
 date: 2023-04-19
+title: Procedure for Running Docker as a Limited User
+categories: ["Engineering Work", "Self-Hosting Forays"]
 ---
 *This article has been obsoleted by [Moving to GitHub Pages], after I decided this was all a bit of a faff and interfering with actually publishing content.*
 

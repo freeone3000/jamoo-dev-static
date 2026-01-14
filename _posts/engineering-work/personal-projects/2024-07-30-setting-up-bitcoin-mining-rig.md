@@ -1,5 +1,8 @@
 ---
 share: "true"
+title: Setting up a bitcoin mining rig as an AI inference platform
+date: 2024-07-30
+categories: ["Engineering Work", "Personal Projects"]
 ---
 
 ***tl;dr**: just buy a mac mini, it'll do this better*
