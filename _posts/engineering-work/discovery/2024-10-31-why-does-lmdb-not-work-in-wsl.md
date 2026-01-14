@@ -3,6 +3,7 @@ share: true
 title: "Why does LMDB not work in WSL?"
 date: 2024-10-31
 categories: ["Engineering Work", "Discovery"]
+permalink: Why%20does%20LMDB%20not%20work%20in%20WSL.html
 ---
 # Why does LMDB not work in WSL?
 
