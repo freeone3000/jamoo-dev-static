@@ -7,14 +7,14 @@ categories:
   - Self-Hosting Forays
 ---
 # Running Docker as a Limited User
-*This article has been obsoleted by moving to github pages, after I decided this was all a bit of a faff and interfering with actually publishing content.*
-
+*This article has been obsoleted by moving to github pages, after I decided this was all a bit of a faff and interfering with actually publishing content. The current blog is a jekyll theme, authored using a code editor, with blog posts written in Obsidian.*
 
 Previously, the website (with no user input, no interaction, that serves static files) was running *as my user* 😱, or worse, under Docker as system 😱🙀🫨 In order to fix this, some changes needed to be made.
 
 [This RedHat documentation](https://www.redhat.com/sysadmin/container-systemd-persist-reboot) will be used as a guide and touchstone throughout. My dev and deploy system, however, is running Debian Bookworm, so my adaptations will follow.
 ## Swapping Podman for Docker
-Docker containers run using an agent as root. In order to drastically limit
+Docker containers run using an agent as root. In order to drastically limit the impact from a [container escape](https://unit42.paloaltonetworks.com/container-escape-techniques/), the container itself should have limited permissions. Docker isn't a reliable permission boundary the way a virtual machine is treated (though [VM escapes](https://www.huntress.com/blog/esxi-vm-escape-exploit) have also been performed!), so we want user-permission-based isolation on the container as well to further frustrate attempts.
+
 First, the [Dockerfile](https://github.com/freeone3000/jamoo-dev-website/blob/master/Dockerfile) needed to be changed to use "docker.io/" as is package prefix. Simple change, just change the first line in the builder
 <pre><code class="language-Dockerfile">FROM <mark>docker.io/</mark>rust:1.74-alpine3.18 as builder
 RUN apk add --no-cache musl-dev
