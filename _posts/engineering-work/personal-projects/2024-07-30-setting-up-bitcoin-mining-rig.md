@@ -1,10 +1,12 @@
 ---
-share: "true"
+share: true
 title: Setting up a bitcoin mining rig as an AI inference platform
 date: 2024-07-30
-categories: ["Engineering Work", "Personal Projects"]
+categories:
+  - Engineering Work
+  - Personal Projects
 ---
-
+# Setting Up a Home AI Server using a Bitcoin Mining Rig
 ***tl;dr**: just buy a mac mini, it'll do this better*
 
 I'm interested in model experimentation, but paying overhead for remote servers and per-use calls seems silly to me. The breakeven point for this rig versus hosting on Colab is 300 hours counting only the VRAM capacity; if you need speed, there's no possible comparison.

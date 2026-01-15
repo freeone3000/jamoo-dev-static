@@ -1,10 +1,11 @@
 ---
-share: "true"
+share: true
 date: 2024-10-20
 title: The Stranger
-categories: ["Non-Tech", "Media"]
+categories:
+  - Non-Tech
+  - Media
 ---
-
 # The Stranger
 
 The following are my notes from reading *The Stranger* by Camus. Some are universal; some are very personal. As with the work itself, these distinctions will be left to the reader.

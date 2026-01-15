@@ -1,7 +1,10 @@
 ---
 date: 2024-12-22
 title: IPv6 OSX Link-Local Strangeness
-categories: ["Engineering Work", "Discovery"]
+categories:
+  - Engineering Work
+  - Discovery
+share: true
 ---
 # IPv6 OSX Link-Local Strangeness
 

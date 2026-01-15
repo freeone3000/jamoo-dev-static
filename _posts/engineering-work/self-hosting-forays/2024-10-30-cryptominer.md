@@ -1,8 +1,10 @@
 ---
-share: "true"
+share: true
 title: Cryptominer on Mumei
 date: 2024-10-30
-categories: ["Engineering Work", "Self-Hosting Forays"]
+categories:
+  - Engineering Work
+  - Self-Hosting Forays
 ---
 # Cryptominer on Mumei
 

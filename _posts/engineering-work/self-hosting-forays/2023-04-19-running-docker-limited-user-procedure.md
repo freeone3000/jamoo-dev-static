@@ -1,10 +1,13 @@
 ---
-share: "true"
+share: true
 date: 2023-04-19
 title: Procedure for Running Docker as a Limited User
-categories: ["Engineering Work", "Self-Hosting Forays"]
+categories:
+  - Engineering Work
+  - Self-Hosting Forays
 ---
-*This article has been obsoleted by [Moving to GitHub Pages], after I decided this was all a bit of a faff and interfering with actually publishing content.*
+# Running Docker as a Limited User
+*This article has been obsoleted by moving to github pages, after I decided this was all a bit of a faff and interfering with actually publishing content.*
 
 
 Previously, the website (with no user input, no interaction, that serves static files) was running *as my user* 😱, or worse, under Docker as system 😱🙀🫨 In order to fix this, some changes needed to be made.

@@ -1,8 +1,11 @@
 ---
-title: Remove caps lock delay
-categories: ["Engineering Work", "Discovery"]
+title: Remove caps lock delay on OSX
+categories:
+  - Engineering Work
+  - Discovery
+share: true
 ---
-# Remove caps lock delay
+# Remove caps lock delay on OSX
 
 Run this command in any terminal:
 
