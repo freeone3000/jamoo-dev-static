@@ -57,7 +57,7 @@ since these form part of the path. {% endcomment %}
 
     {% for post in posts_by_categories %}
       {% if post.categories[0] == level1 and post.categories[1] == level2 %}
-- [{{ post.title }}]({{ post.url | relative_url }})
+- [{{ post.title }}]({{ post.url | relative_url }}) ({{ post.date | date: "%Y-%m-%d" }})
       {% endif %}
     {% endfor %}
 
@@ -69,7 +69,7 @@ since these form part of the path. {% endcomment %}
   {% comment %} Handle level1-only posts (no level2) {% endcomment %}
   {% for post in posts_by_categories %}
     {% if post.categories[0] == level1 and post.categories.size == 1 %}
-- [{{ post.title }}]({{ post.url | relative_url }})
+- [{{ post.title }}]({{ post.url | relative_url }}) ({{ post.date | date: "%Y-%m-%d" }})
     {% endif %}
   {% endfor %}
 </section> {% comment %} level1 section {% endcomment %}
