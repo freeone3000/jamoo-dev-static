@@ -77,8 +77,9 @@ since these form part of the path. {% endcomment %}
 
 <section markdown="1">
 ## Pages
+- <a href="{{ '/assets/pdf/SearchFocus2025.pdf' | relative_url }}" rel="external opener me" target="_blank">Resume</a>
 {% for page in site.pages %}
-  {% if page.title and page.layout != "index" %}
+  {% if page.layout != "index" %}
 - [{{ page.title }}]({{ page.url | relative_url }})
     {% endif %}
 {% endfor %}
