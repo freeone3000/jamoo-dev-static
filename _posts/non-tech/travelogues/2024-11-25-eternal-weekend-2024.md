@@ -1,8 +1,9 @@
 ---
 share: true
 date: 2024-11-25
+title: Eternal Weekend 2024
+categories: ["Non-Tech", "Travelogues"]
 ---
-
 # Eternal Weekend 2024
 I arrived at the airport at 5pm. First thing I noticed was the under construction sign, claiming to be building the airport pittsburgh deserves. There was no subjective mention of inherent quality.
 

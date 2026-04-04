@@ -1,6 +1,8 @@
 ---
 share: true
-date: 2026-06-29
+date: 2025-06-29
+title: Cyberpunk 2077 Repeat Playthrough
+categories: ["Non-Tech", "Media"]
 ---
 # Cyberpunk 2077 Repeat Playthrough
 

@@ -2,8 +2,8 @@
 share: true
 title: Caddy ACME Wildcard Challenges
 date: 2025-01-25
+categories: ["Engineering Work", "Self-Hosting Forays"]
 ---
-
 # Caddy Acme Wildcard Challenges
 I'm using Caddy as a reverse proxy, I wanted real certificates
 on my homelab that validate in Safari, and I did not want to expose these actual servers to the internet.
