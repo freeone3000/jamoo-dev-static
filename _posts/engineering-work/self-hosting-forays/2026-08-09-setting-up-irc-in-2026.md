@@ -20,7 +20,7 @@ I used to have a great IRC client. Connected well, had full IRCv3 support, did n
 ### Current SoTA for Servers
 After comparing various irc servers, we're going with [InspIRCd](https://www.inspircd.org/), due to it having significant capabilities but also real-world performance and good documentation.
 
-My personal bouncer is soju, set up in a Dockerfile with in-built tailscale. We're using docker compose volumes for persistence, which is good enough for this use-case. These can be persisted externally via any file backup mechanism if additional durability is required. I run this through my local [Portainer](https://www.portainer.io) setup with a bog-standard [local docker repository](https://www.docker.com/blog/how-to-use-your-own-registry-2/). The docker repository is treated as ephemeral, and may be later upgraded if such a thing is desired - I'm keeping all of the source 😁
+My personal bouncer is soju, set up in a Dockerfile with in-built tailscale. We're using docker compose volumes for persistence, which is good enough for this use-case. These can be persisted externally via any file backup mechanism if additional durability is required. I run this through my local [Portainer](https://www.portainer.io) setup with a bog-standard [local docker repository](https://www.docker.com/blog/how-to-use-your-own-registry-2/). The docker repository is treated as ephemeral, and may be later upgraded if such a thing is desired - I'm keeping all of the source 😁 Note that you'll need to connect via `docker exec -it soju /bin/sh` and then run `sojudb create-user <username> -admin` to create a user on whichever server you're deploying to. (It should be possible to run sojudb under `docker exec -it`, but something gets confused in the pipes.)
 ## Use
 I've been using it for a couple of days and it works well for IRCv3 servers like our private one, and even IRCv2 servers like liberachat. It's nice reconnecting with my old friends, and it's a lot less corporate than discord! However, it's not a perfect replacement: see the Future Work section.
 # Future Work
@@ -167,10 +167,9 @@ exit "$STATUS"
 ## Required env vars (Portainer > Stack > Environment variables, or a .env  
 ## alongside this file):  
 ##   TS_AUTHKEY=tskey-auth-XXXXXX   reusable, pre-approved, non-ephemeral  
-##   REGISTRY=artifactory.example/docker   local Artifactory Docker repo  
+##   REGISTRY=melfina.jamoo.dev:5000       registry from registry.yml  
+##   SOJU_TAG=latest                       optional, defaults to latest  
 ##  
-## The image is built from ./soju (Dockerfile + entrypoint.sh) and pushed to  
-## Artifactory; `docker compose -f soju.yml build` regenerates it locally.  
 ##  
 ## Requires HTTPS certificates to be enabled for the tailnet  
 ## (https://login.tailscale.com/admin/dns) -- Serve cannot terminate TLS without it.  
@@ -179,8 +178,7 @@ name: soju
 services:  
   soju:  
     image: ${REGISTRY:-localhost}/soju-tailscale:${SOJU_TAG:-latest}  
-    build:  
-      context: ./soju  
+    pull_policy: always  
     container_name: soju  
     restart: unless-stopped  
     environment:  
