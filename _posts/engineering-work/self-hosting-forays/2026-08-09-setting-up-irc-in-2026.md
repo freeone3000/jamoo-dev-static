@@ -21,6 +21,8 @@ I used to have a great IRC client. Connected well, had full IRCv3 support, did n
 After comparing various irc servers, we're going with [InspIRCd](https://www.inspircd.org/), due to it having significant capabilities but also real-world performance and good documentation.
 
 My personal bouncer is soju, set up in a Dockerfile with in-built tailscale. We're using docker compose volumes for persistence, which is good enough for this use-case. These can be persisted externally via any file backup mechanism if additional durability is required. I run this through my local [Portainer](https://www.portainer.io) setup with a bog-standard [local docker repository](https://www.docker.com/blog/how-to-use-your-own-registry-2/). The docker repository is treated as ephemeral, and may be later upgraded if such a thing is desired - I'm keeping all of the source 😁 Note that you'll need to connect via `docker exec -it soju /bin/sh` and then run `sojudb create-user <username> -admin` to create a user on whichever server you're deploying to. (It should be possible to run sojudb under `docker exec -it`, but something gets confused in the pipes.)
+
+You *must restart the docker container* after every database modification through `sojudb`!
 ## Use
 I've been using it for a couple of days and it works well for IRCv3 servers like our private one, and even IRCv2 servers like liberachat. It's nice reconnecting with my old friends, and it's a lot less corporate than discord! However, it's not a perfect replacement: see the Future Work section.
 # Future Work

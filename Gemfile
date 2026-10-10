@@ -11,7 +11,7 @@ source "https://rubygems.org"
 gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
+gem "jekyll", group: :jekyll_plugins
 gem "webrick" # no longer in ruby 3.0
 gem "csv" # no longer in ruby 3.4.0
 # If you have any plugins, put them here!
@@ -41,3 +41,6 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
+
+# Force upgrade to 3.4.0 here due to a zip-traversal vulnerability
+gem "rubyzip", ">= 3.4.0"
