@@ -1,5 +1,5 @@
 ---
-share: false
+share: true
 title: Setting up IRC in 2026
 date: 2026-08-09
 categories:
